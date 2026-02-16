@@ -1,7 +1,7 @@
 name: CD - Terraform Deploy
 
 on:
-  workflow_dispatch: # Allows manual trigger as required by Task 6
+  workflow_dispatch:
 
 jobs:
   deploy-infrastructure:
@@ -21,7 +21,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init and Apply
-        # This section is CRITICAL to stop the manual prompt
+        # This section is to stop the manual prompt
         env:
           TF_VAR_public_key: ${{ secrets.TF_VAR_public_key }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

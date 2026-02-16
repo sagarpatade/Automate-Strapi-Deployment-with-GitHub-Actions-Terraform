@@ -25,7 +25,7 @@ resource "aws_security_group" "strapi_sg" {
   }
 }
 
-# 2. Reference your PERMANENT key
+# 2. key
 resource "aws_key_pair" "deployer" {
   key_name   = "task5-permanent-key"
   public_key = var.public_key

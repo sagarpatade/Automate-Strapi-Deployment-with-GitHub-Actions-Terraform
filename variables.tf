@@ -25,7 +25,6 @@ variable "key_name" {
 
 variable "docker_image" {
   description = "The Docker Hub image to pull"
-  # REPLACE THIS WITH YOUR ACTUAL DOCKER HUB USERNAME!
   default     = "sagarpatade1900/strapi-app:slim"
 }
 
@@ -37,5 +36,5 @@ variable "public_key" {
 variable "docker_image_tag" {
   description = "The specific tag of the Docker image to deploy"
   type        = string
-  default     = "latest" # Fallback if no tag is provided
+  default     = "latest" 
 }

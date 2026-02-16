@@ -18,7 +18,6 @@ WORKDIR /opt/app/my-project
 RUN npm install pg --save
 
 # COPY CUSTOM DATABASE CONFIG
-# This overwrites the default SQLite config with our Postgres one
 COPY config/database.js ./config/database.js
 
 # Rebuild and optimize
