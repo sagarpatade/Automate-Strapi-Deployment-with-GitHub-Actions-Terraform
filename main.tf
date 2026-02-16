@@ -28,7 +28,7 @@ resource "aws_security_group" "strapi_sg" {
 # 2. Reference your PERMANENT key
 resource "aws_key_pair" "deployer" {
   key_name   = "task5-permanent-key"
-  public_key = file("${path.module}/task5-permanent.pub")
+  public_key = var.public_key
 }
 
 # 3. Create EC2 Instance
