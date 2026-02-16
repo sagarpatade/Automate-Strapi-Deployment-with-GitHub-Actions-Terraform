@@ -21,12 +21,12 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Terraform Init and Apply
-        # The 'env' section maps your GitHub Secret to a variable Terraform can read
+        # This section is CRITICAL to stop the manual prompt
         env:
           TF_VAR_public_key: ${{ secrets.TF_VAR_public_key }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
         run: |
           terraform init
-          # Terraform will now see TF_VAR_public_key and skip the manual prompt
           terraform apply -auto-approve
