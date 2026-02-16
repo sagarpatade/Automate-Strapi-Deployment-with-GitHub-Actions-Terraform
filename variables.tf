@@ -33,3 +33,9 @@ variable "public_key" {
   description = "The public SSH key for the EC2 instance"
   type        = string
 }
+
+variable "docker_image_tag" {
+  description = "The specific tag of the Docker image to deploy"
+  type        = string
+  default     = "latest" # Fallback if no tag is provided
+}
