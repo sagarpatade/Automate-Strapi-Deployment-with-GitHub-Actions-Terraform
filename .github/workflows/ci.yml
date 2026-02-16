@@ -24,7 +24,7 @@ jobs:
 
       - name: Build and Push Image to ECR
         run: |
-          # Build the image using the company ECR registry path
+          # Build the image using the ECR login credentials
           docker build -t 811738710312.dkr.ecr.us-east-1.amazonaws.com/sagar-patade-strapi-app:latest .
           # Push the image so it's ready for deployment
           docker push 811738710312.dkr.ecr.us-east-1.amazonaws.com/sagar-patade-strapi-app:latest
