@@ -1,0 +1,10 @@
+# Ignore sensitive SSH keys
+task5-permanent
+task5-permanent.pub
+*.pem
+
+# Ignore Terraform state and sensitive files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
